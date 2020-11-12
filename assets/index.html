@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <!-- google-font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google-font-end -->
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <!-- End-css -->
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <!-- font-awesome end -->
+  </head>
+  <body>
+    <!-- Manager Employees -->
+    <div class="main">
+      <div class="container">
+        <div class="main-title">
+          <h3 class="title">Manager <span>Employees</span></h3>
+          <div class="main-button">
+            <a type="button" class="btn btn--danger" id="deleteLocal">
+              <span class="icon"></span>
+              <span class="text">Delete</span>
+            </a>
+            <a type="button" class="btn btn--success" id="showPopup">
+              <span class="icon"></span>
+              <span class="text">Add New Employee</span>
+            </a>
+          </div>
+        </div>
+        <div class="main-table">
+          <table>
+            <thead>
+              <tr class="table-head">
+                <th>
+                  <input type="checkbox" />
+                </th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>phone</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr>
+                <td class="">
+                  <input type="checkbox" />
+                </td>
+                <td class="">
+                  <input type="checkbox" />
+                </td>
+                <td class="">
+                  <input type="checkbox" />
+                </td>
+                <td class="">
+                  <input type="checkbox" />
+                </td>
+                <td class="">
+                  <input type="checkbox" />
+                </td>
+                <td class="">
+                  <i class="fas fa-edit" id="editPopup"></i>
+                  <i class="fas fa-trash-alt"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="main-form">
+          <form action="#" id="form-employees">
+            <div class="main-form__head">
+              <h3 class="add-title">Add Employee</h3>
+              <h3 class="edit-title">Edit Employee</h3>
+              <span class="fas fa-plus" onclick="hidePopup()" ></span>
+            </div>
+            <div class="main-form__body">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="fullname"
+                  id="fullname"
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="address" class="form-label">Address</label>
+                <textarea
+                  name="address"
+                  id="address"
+                  class="form-control"
+                  rows="4"
+                ></textarea>
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  id="phone"
+                />
+                <span class="form-error"></span>
+              </div>
+            </div>
+            <div class="main-form__footer">
+              <button type="button" class="btn btn--default" onclick="hidePopup()">Cancel</button>
+              <button type="button" class="btn btn--success"id="addList">Add</button>
+              <button type="button" class="btn btn--primary"id="editList">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End - Manager Employees -->
+    <script src="./js/employees.js"></script>
+    <script src="./js/employeesMethod.js"></script>
+    <script src="./js/validation.js"></script>
+   <script src="./js/main.js"></script>
+  </body>
+</html>
