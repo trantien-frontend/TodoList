@@ -1,0 +1,18 @@
+
+    .btn{
+        padding: 5px 15px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &--danger{
+            background: var(--danger);
+        }
+        &--success {
+            background: var(--success) ;
+        }
+        &--default{}
+        &--primary {
+            background: var(--primary);
+        }
+    }
