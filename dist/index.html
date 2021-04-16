@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <!-- loadding -->
+    <div class="loading">
+      <div class="loading-bg"></div>
+      <div class="loading-svg">
+        <svg width="140" height="140">
+          <circle cx="70" cy="70" r="60"></circle>
+        </svg>
+      </div>
+    </div>
+    <!-- loadding -->
+    <!-- Manager Employees -->
+    <div class="main">
+      <div class="container">
+        <div class="main-title">
+          <h3 class="title">Manager <span>Employees</span></h3>
+          <div class="main-title__button">
+            <a type="button" class="btn btn--danger" id="del-form-checked">
+              <span class="icon"></span>
+              <span class="text">Delete</span>
+            </a>
+            <a type="button" class="btn btn--success" id="show-form">
+              <span class="icon"></span>
+              <span class="text">Add New Employee</span>
+            </a>
+          </div>
+        </div>
+        <div class="main-sort">
+          <label for="sort">SortBy</label>
+          <select class="sort-by" name="sort" id="sort">
+            <option value="name-asc">Sort A-Z</option>
+            <option value="name-desc">Sort Z-A</option>
+          </select>
+        </div>
+        <div class="main-search">
+          <form class="form-search">
+            <input type="text" class="search" placeholder="Search" />
+          </form>
+        </div>
+        <div class="main-table">
+          <table>
+            <thead>
+              <tr class="table-head">
+                <th>
+                  <input type="checkbox" class="allcheck" />
+                </th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>phone</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody class="tbody"></tbody>
+          </table>
+          <ul class="numbersPage"></ul>
+        </div>
+        <div class="main-form">
+          <form action="#" id="form-employees">
+            <div class="main-form__head">
+              <h3 class="add-title">Add Employee</h3>
+              <h3 class="edit-title">Edit Employee</h3>
+              <h3 class="del-title">Delete Employee</h3>
+              <span class="fas fa-plus hide-form"></span>
+            </div>
+            <div class="main-form__body">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="fullname" id="fullname" />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" name="email" id="email" />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="address" class="form-label">Address</label>
+                <textarea name="address" id="address" class="form-control" rows="4"></textarea>
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" class="form-control" name="phone" id="phone" />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-text__del">
+                <h4>Are you sure you want to delete these Records?</h4>
+                <p>This action cannot be undone.</p>
+              </div>
+            </div>
+            <div class="main-form__footer">
+              <button type="button" class="btn btn--success" id="add-employee">add</button>
+              <button type="button" class="btn btn--primary" id="edit-employee">Save</button>
+              <button type="button" class="btn btn--danger" id="del-employee">Delete</button>
+              <button type="button" class="btn btn--default hide-form">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End - Manager Employees -->
+    <!-- overlay -->
+    <div class="overlay"></div>
+    <!-- overlay end -->
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
